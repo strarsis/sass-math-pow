@@ -1,0 +1,29 @@
+{
+  "name": "sass-math-pow",
+  "version": "0.1.0",
+  "description": "Math pow() polyfill/feature detection with non-integer exponents support for (without compass) ruby sass, sass and sass+eyeglass",
+  "license": "MIT",
+  "repository": "strarsis/eyeglass-sass-math-pow",
+  "author": {
+    "name": "strarsis",
+    "email": "strarsis@gmail.com",
+    "url": "https://github.com/strarsis/eyeglass-sass-math-pow"
+  },
+  "files": [
+    "sass"
+  ],
+  "keywords": [
+    "eyeglass-module",
+    "sass"
+  ],
+  "main": "eyeglass-exports.js",
+  "eyeglass": {
+    "needs": "^0.7.1",
+    "name": "math-pow",
+    "exports": "eyeglass-exports.js"
+  },
+  "dependencies": {
+    "eyeglass": "*",
+    "eyeglass-math": "^1.0.1"
+  }
+}
