@@ -14,7 +14,22 @@
   ],
   "keywords": [
     "eyeglass-module",
-    "sass"
+    "sass",
+    "math",
+    "pow",
+    "exponent",
+    "non integer",
+    "non-integer",
+    "integer",
+    "decimal",
+    "compass",
+    "ruby",
+    "ruby sass",
+    "libsass",
+    "node sass",
+    "eyeglass",
+    "support",
+    "polyfill"
   ],
   "main": "eyeglass-exports.js",
   "eyeglass": {
