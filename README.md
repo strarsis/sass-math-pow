@@ -16,7 +16,7 @@ Note: To @import from npm packages/node_modules with ruby sass or plain sass (wi
 [sass-include-paths](https://github.com/strarsis/sass-include-paths) helper may be useful.
 ````
 @import 'math-pow';
-@debug pow(9, 0.5); // =3 across different sass variants
+@debug poly-pow(9, 0.5); // =3 across different sass variants
 ````
 
 ## Credits

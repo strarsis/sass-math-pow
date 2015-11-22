@@ -11,7 +11,7 @@
 $pow-nonint-ok: pow-nonint-ok(); // cache result to improve performance
 
 @import '_pow-polyfill';
-@function pow($Base, $Exponent) {
+@function poly-pow($Base, $Exponent) {
   @if($pow-nonint-ok == false) {
     @return math-pow-polyfill($Base, $Exponent); // use polyfill pow
   } @else {
