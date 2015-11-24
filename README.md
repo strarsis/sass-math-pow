@@ -1,4 +1,7 @@
 # sass-math-pow
+
+[![david](https://david-dm.org/strarsis/sass-math-pow.svg)](https://david-dm.org/strarsis/sass-math-pow)
+
 Math pow() polyfill/feature detection with non-integer exponents support 
 for (without compass) ruby sass, plain sass and sass+eyeglass
 
