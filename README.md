@@ -8,7 +8,7 @@ for (without compass) ruby sass, plain sass and sass+eyeglass
 It will autodetect whether pow() with native non-integer exponents support is available (by eyeglass+sass with eyeglass-math) for full performance and also tries to intall it (as dependency of this package),
 otherwise, in case of ruby sass without compass or plain sass, a pow() polyfill is used instead that supports pow() with non-integer exponents.
 
-This polyfill is useful for projects that may use pow() with non-integer exponents and should correctly caluclate across different ruby sass variants and versions.
+This polyfill is useful for projects that may use pow() with non-integer exponents and should correctly caluclate across different sass variants and versions.
 
 ## Usage
 ````
