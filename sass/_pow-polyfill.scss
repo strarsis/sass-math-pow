@@ -41,27 +41,13 @@
   @return $result;
 }
 
-@function math-summation($iteratee, $input, $initial: 0, $limit: 100) {
-  $sum: 0;
+@function math-exp($value) {
+  $result: 0;
 
-  @for $index from $initial to $limit {
-    $sum: $sum + call(get-function($iteratee), $input, $index);
+  @for $index from 0 to 100 {
+    $result: $result + math-pow-polyfill($value, $index) / math-factorial($index);
   }
 
-  @return $sum;
-}
-
-@function math-exp-maclaurin($x, $n) {
-  $result: math-pow-polyfill($x, $n) / math-factorial($n);
-  @return $result;
-}
-@function math-exp($value) {
-  $result: math-summation(math-exp-maclaurin, $value, 0, 100);
-  @return $result;
-}
-
-@function math-ln-maclaurin($x, $n) {
-  $result: (math-pow-polyfill(-1, $n + 1) / $n) * (math-pow-polyfill($x - 1, $n));
   @return $result;
 }
 
@@ -75,7 +61,11 @@
 
   $value: $value / math-pow-polyfill(10, $ten-exp);
 
-  $result: math-summation(math-ln-maclaurin, $value, 1, 100);
+  $result: 0;
+
+  @for $index from 1 to 100 {
+    $result: $result + (math-pow-polyfill(-1, $index + 1) / $index) * (math-pow-polyfill($value - 1, $index));
+  }
 
   @return $result + $ten-exp * $ln-ten;
 }
