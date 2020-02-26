@@ -1,6 +1,6 @@
 {
   "name": "sass-math-pow",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Math pow() polyfill/feature detection with non-integer exponents support for (without compass) ruby sass, sass and sass+eyeglass",
   "license": "MIT",
   "repository": "strarsis/sass-math-pow",
