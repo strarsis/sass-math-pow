@@ -12,6 +12,9 @@
   "files": [
     "sass"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "eyeglass-module",
     "sass",
@@ -40,5 +43,9 @@
   "dependencies": {
     "eyeglass": "*",
     "eyeglass-math": "^1.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-true": "^5.0.0"
   }
 }
