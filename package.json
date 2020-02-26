@@ -45,6 +45,7 @@
     "eyeglass-math": "^1.0.1"
   },
   "devDependencies": {
+    "mocha": "^7.0.1",
     "node-sass": "^4.13.1",
     "sass-true": "^5.0.0"
   }
