@@ -47,14 +47,13 @@
 }
 
 @function math-ln($value) {
-  $ten-exp: 1;
+  $ten-exp: 0;
   $ln-ten: 2.30258509;
 
-  @while ($value > math-pow-polyfill(10, $ten-exp)) {
+  @while ($value > 1) {
     $ten-exp: $ten-exp + 1;
+    $value: $value / 10;
   }
-
-  $value: $value / math-pow-polyfill(10, $ten-exp);
 
   $item: -1;
   $result: 0;
