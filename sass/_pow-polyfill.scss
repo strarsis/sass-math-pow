@@ -6,11 +6,17 @@
 //
 
 @function math-pow-polyfill($number, $exp) {
-  @if (round($exp) != $exp) {
-    @return math-exp($exp * math-ln($number));
+  $exp1: round($exp);
+  $result: pow-int($number, $exp1);
+
+  @if ($exp1 != $exp) {
+    $result: $result * math-exp(($exp - $exp1) * math-ln($number));
   }
 
-  // Traditional method for integers
+  @return $result;
+}
+
+@function pow-int($number, $exp) {
   @if $exp == 0 {
     @return 1;
   }
