@@ -23,7 +23,8 @@ Note: To @import from npm packages/node_modules with ruby sass or plain sass (wi
 ````
 
 ## Credits
-Polyfill by drtimofey, script based on script by davidkpiano, see these links
+Performance improvements and support for negative exponents by @xi.
+Polyfill by @drtimofey, script based on script by @davidkpiano, see these links
 - https://github.com/thoughtbot/bitters/issues/167
 - https://github.com/thoughtbot/bourbon/issues/717
 - https://gist.github.com/davidkpiano/ad6e6771df050ff3727f
