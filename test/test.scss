@@ -21,7 +21,7 @@
     @include assert-equal(math-round(math-pow-polyfill(4,   3/2) * 100), 800);
     @include assert-equal(math-round(math-pow-polyfill(0.5, 0.5) * 100),  71);
   }
-  @include test('Supports negativ exponent.') {
+  @include test('Supports negative exponent.') {
     @include assert-equal(math-round(math-pow-polyfill(   1,   -2  ) * 100), 100);
     @include assert-equal(math-round(math-pow-polyfill(   2,   -2  ) * 100),  25);
     @include assert-equal(math-round(math-pow-polyfill(   0.5, -2  ) * 100), 400);
