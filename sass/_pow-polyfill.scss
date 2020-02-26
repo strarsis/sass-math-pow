@@ -11,41 +11,30 @@
   }
 
   // Traditional method for integers
-  $value: 1;
-
-  @if $exp > 0 {
-    @for $i from 1 through $exp {
-      $value: $value * $number;
-    }
-  }
-  @else if $exp < 0 {
-    @for $i from 1 through -$exp {
-      $value: $value / $number;
-    }
-  }
-
-  @return $value;
-}
-
-@function math-factorial($value) {
-  @if $value == 0 {
+  @if $exp == 0 {
     @return 1;
   }
-
-  $result: 1;
-
-  @for $index from 1 through $value {
-    $result: $result * $index;
+  @else if $exp < 0 {
+    @return 1 / math-pow-polyfill($number, -$exp);
   }
-
-  @return $result;
+  @else {
+    $e: floor($exp / 2);
+    $pow: math-pow-polyfill($number, $e);
+    @if $e * 2 == $exp {
+        @return $pow * $pow;
+    } @else {
+        @return $pow * $pow * $number;
+    }
+  }
 }
 
 @function math-exp($value) {
-  $result: 0;
+  $item: 1;
+  $result: 1;
 
-  @for $index from 0 to 100 {
-    $result: $result + math-pow-polyfill($value, $index) / math-factorial($index);
+  @for $index from 1 to 100 {
+    $item: $item * $value / $index;
+    $result: $result + $item;
   }
 
   @return $result;
@@ -61,10 +50,12 @@
 
   $value: $value / math-pow-polyfill(10, $ten-exp);
 
+  $item: -1;
   $result: 0;
 
   @for $index from 1 to 100 {
-    $result: $result + (math-pow-polyfill(-1, $index + 1) / $index) * (math-pow-polyfill($value - 1, $index));
+    $item: $item * (1 - $value);
+    $result: $result + $item / $index;
   }
 
   @return $result + $ten-exp * $ln-ten;
