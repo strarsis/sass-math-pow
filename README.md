@@ -23,8 +23,9 @@ Note: To @import from npm packages/node_modules with ruby sass or plain sass (wi
 ````
 
 ## Credits
-Performance and code improvements by [xi](https://github.com/xi).
-Polyfill by [drtimofey](https://github.com/drtimofey), script based on script by [davidkpiano](https://github.com/davidkpiano), see these links
-- https://github.com/thoughtbot/bitters/issues/167
-- https://github.com/thoughtbot/bourbon/issues/717
-- https://gist.github.com/davidkpiano/ad6e6771df050ff3727f
+- [`/` Dart SASS](https://github.com/sass/dart-sass/blob/main/CHANGELOG.md#1330) fix and code improvements by [polarbirke](https://github.com/polarbirke).
+- Performance and code improvements by [xi](https://github.com/xi).
+- Polyfill by [drtimofey](https://github.com/drtimofey), script based on script by [davidkpiano](https://github.com/davidkpiano), see these links
+  - https://github.com/thoughtbot/bitters/issues/167
+  - https://github.com/thoughtbot/bourbon/issues/717
+  - https://gist.github.com/davidkpiano/ad6e6771df050ff3727f
